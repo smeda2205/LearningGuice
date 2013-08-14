@@ -5,6 +5,12 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Module;
 
+/**
+ * Main Class for Execution
+ * 
+ * @author srimeda
+ *
+ */
 public class Main {
 	public static void main(String[] args) {
 		Module module = new MyModule();
