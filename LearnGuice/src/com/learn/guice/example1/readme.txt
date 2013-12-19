@@ -1,0 +1,1 @@
+This is a simple example that explains how we can use to inject the dependencies in java.
