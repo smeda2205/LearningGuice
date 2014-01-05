@@ -1,4 +1,4 @@
-package com.learn.guice.example4;
+package com.learn.guice.learning.concepts;
 
 import com.google.inject.Inject;
 import com.google.inject.name.Named;

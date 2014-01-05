@@ -1,4 +1,4 @@
-package com.learn.guice.example4;
+package com.learn.guice.learning.concepts;
 
 public interface CreditCardProcessor {
 	public String getProcessorName();

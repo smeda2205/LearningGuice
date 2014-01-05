@@ -1,4 +1,4 @@
-package com.learn.guice.example4;
+package com.learn.guice.learning.concepts;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;

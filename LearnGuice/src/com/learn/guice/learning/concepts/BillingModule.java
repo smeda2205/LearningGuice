@@ -1,4 +1,4 @@
-package com.learn.guice.example4;
+package com.learn.guice.learning.concepts;
 
 import com.google.inject.Binder;
 import com.google.inject.Module;
@@ -9,11 +9,11 @@ public class BillingModule implements Module {
 
 	@Override
 	public void configure(Binder binder) {
-		//1. Class binding
+		// 1. Class binding
 //		binder.bind(TransactionLog.class).to(DatabaseTransactionLog.class).in(Singleton.class);
 //		binder.bind(CreditCardProcessor.class).to(PaypalCreditCardProcessor.class);
 		
-		//2. instance binding
+		// 2. instance binding
 		//binder.bind(CreditCardProcessor.class).toInstance(new PaypalCreditCardProcessor());
 		
 		/**
