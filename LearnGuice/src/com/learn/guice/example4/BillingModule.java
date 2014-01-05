@@ -3,6 +3,7 @@ package com.learn.guice.example4;
 import com.google.inject.Binder;
 import com.google.inject.Module;
 import com.google.inject.Singleton;
+import com.google.inject.name.Names;
 
 public class BillingModule implements Module {
 
@@ -29,7 +30,8 @@ public class BillingModule implements Module {
 		
 		binder.bind(CreditCardProcessor.class).to(PaypalCreditCardProcessor.class);
 		
-		
+		// 4. Binding Annotation @Named
+		binder.bind(CreditCardProcessor.class).annotatedWith(Names.named("PayPal")).to(PaypalCreditCardProcessor.class);
 	}
 
 }

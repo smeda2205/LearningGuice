@@ -14,5 +14,11 @@ public class Client {
 		 */
 		RealBillingService billingService = injector.getInstance(RealBillingService.class);
 		billingService.execute();
+		
+		/**
+		 * Explains the usage of Binding Annotation @Named
+		 */
+		BindingAnnotationService bindingAnnotationService = injector.getInstance(BindingAnnotationService.class);
+		bindingAnnotationService.process();
 	}
 }
