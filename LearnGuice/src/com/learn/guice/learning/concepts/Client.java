@@ -27,5 +27,12 @@ public class Client {
 		 */
 		BindingWithCustomAnnotationService bindingWithCustomAnnotationService = injector.getInstance(BindingWithCustomAnnotationService.class);
 		bindingWithCustomAnnotationService.display();
+		
+		/**
+		 * Explains @Provides binding with @PayPal Custom annotation
+		 */
+		ProvidesWithCustomAnnotationExample providesWithCustomAnnotationExample = injector.getInstance(ProvidesWithCustomAnnotationExample.class);
+		providesWithCustomAnnotationExample.display();
+		
 	}
 }

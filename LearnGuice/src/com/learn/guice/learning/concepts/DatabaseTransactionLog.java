@@ -7,4 +7,12 @@ public class DatabaseTransactionLog implements TransactionLog {
 		return "Database Transaction";
 	}
 
+	public void setJdbcUrl(String string) {
+		
+	}
+
+	public void setThreadPoolSize(int i) {
+		
+	}
+
 }
