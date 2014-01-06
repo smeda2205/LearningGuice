@@ -4,6 +4,7 @@ import com.google.inject.Binder;
 import com.google.inject.Module;
 import com.google.inject.Singleton;
 import com.google.inject.name.Names;
+import com.learn.guice.learning.concepts.binding.customannotation.PayPal;
 
 public class BillingModule implements Module {
 
@@ -32,6 +33,9 @@ public class BillingModule implements Module {
 		
 		// 4. Binding Annotation @Named
 		binder.bind(CreditCardProcessor.class).annotatedWith(Names.named("PayPal")).to(PaypalCreditCardProcessor.class);
+		
+		// 5. Binding using Custom Annotation (Here, I created a custom annotation called @PayPal)
+		binder.bind(CreditCardProcessor.class).annotatedWith(PayPal.class).to(PaypalCreditCardProcessor.class);
 	}
 
 }
