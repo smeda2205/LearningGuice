@@ -5,6 +5,7 @@ import com.google.inject.Module;
 import com.google.inject.Provides;
 import com.google.inject.name.Names;
 import com.learn.guice.learning.concepts.binding.customannotation.PayPal;
+import com.learn.guice.learning.concepts.providers.DatabaseTransactionLogProvider;
 
 public class BillingModule implements Module {
 
@@ -45,6 +46,11 @@ public class BillingModule implements Module {
 		 */
 		//binder.bind(CreditCardProcessor.class).annotatedWith(PayPal.class).to(PaypalCreditCardProcessor.class); // Commented to explain @Provides with custom @PayPal annotation below #7
 		
+		/**
+		 *  8. Explains the usage of Provider, instead of using the @Provides
+		 */
+		binder.bind(TransactionLog.class).toProvider(DatabaseTransactionLogProvider.class);
+		
 	}
 
 
@@ -58,13 +64,13 @@ public class BillingModule implements Module {
 	 *  
 	 */
 	
-	@Provides
+	/*@Provides
 	TransactionLog provideTransactionLog(){
 		DatabaseTransactionLog transactionLog = new DatabaseTransactionLog();
 		transactionLog.setJdbcUrl("jdbc:mysql://localhost/pizza");
 	    transactionLog.setThreadPoolSize(30);
 	    return transactionLog;
-	}
+	}*/ // -- Commented to explain the usage of the Provider defined in example #8
 	
 	/**
 	 *  7. @Provides with binding custom annotation OR with binding annotation

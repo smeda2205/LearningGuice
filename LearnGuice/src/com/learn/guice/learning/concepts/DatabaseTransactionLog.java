@@ -2,17 +2,28 @@ package com.learn.guice.learning.concepts;
 
 public class DatabaseTransactionLog implements TransactionLog {
 
+	private String jdbcUrl;
+	private int threadPoolSize;
+
 	@Override
 	public String type() {
 		return "Database Transaction";
 	}
 
-	public void setJdbcUrl(String string) {
-		
+	public String getJdbcUrl() {
+		return jdbcUrl;
 	}
 
-	public void setThreadPoolSize(int i) {
-		
+	public void setJdbcUrl(String jdbcUrl) {
+		this.jdbcUrl = jdbcUrl;
+	}
+
+	public int getThreadPoolSize() {
+		return threadPoolSize;
+	}
+
+	public void setThreadPoolSize(int poolSize) {
+		this.threadPoolSize = poolSize;
 	}
 
 }
