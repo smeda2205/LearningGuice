@@ -6,7 +6,6 @@ import com.learn.guice.learning.concepts.TransactionLog;
 
 public class DatabaseTransactionLogProvider implements Provider<TransactionLog> {
 
-	@Override
 	public TransactionLog get() {
 		DatabaseTransactionLog transactionLog = new DatabaseTransactionLog();
 

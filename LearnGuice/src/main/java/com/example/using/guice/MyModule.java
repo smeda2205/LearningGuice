@@ -7,7 +7,6 @@ import com.google.inject.Module;
 
 public class MyModule implements Module{
 
-	@Override
 	public void configure(Binder binder) {
 		binder.bind(Notifier.class).to(SendSMS.class);
 	}

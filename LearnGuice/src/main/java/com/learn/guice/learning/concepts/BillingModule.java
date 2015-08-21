@@ -9,7 +9,6 @@ import com.learn.guice.learning.concepts.providers.DatabaseTransactionLogProvide
 
 public class BillingModule implements Module {
 
-	@Override
 	public void configure(Binder binder) {
 		/**
 		 *  1. Class binding

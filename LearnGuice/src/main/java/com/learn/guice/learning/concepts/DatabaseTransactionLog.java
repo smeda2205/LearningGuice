@@ -5,7 +5,6 @@ public class DatabaseTransactionLog implements TransactionLog {
 	private String jdbcUrl;
 	private int threadPoolSize;
 
-	@Override
 	public String type() {
 		return "Database Transaction";
 	}

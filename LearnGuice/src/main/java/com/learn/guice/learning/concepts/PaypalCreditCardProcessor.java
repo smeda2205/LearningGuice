@@ -8,7 +8,6 @@ public class PaypalCreditCardProcessor implements CreditCardProcessor {
 		this.processorName = processorName;
 	}
 
-	@Override
 	public String getProcessorName() {
 		return processorName; // "PayPal Credit Card Processor!!";
 	}
